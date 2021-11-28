@@ -1,65 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <title>Test</title>
-        <link rel="stylesheet" href="/build/app.css">
-    </head>
-    <body>
-    <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-            <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-            <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-                <div class="max-w-md mx-auto">
-                    <div>
-                        <img src="/img/logo.svg" class="h-7 sm:h-8" />
-                    </div>
-                    <div class="divide-y divide-gray-200">
-                        <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                            <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
-                            <ul class="list-disc space-y-2">
-                                <li class="flex items-start">
-                <span class="h-6 flex items-center sm:h-7">
-                  <svg class="flex-shrink-0 h-5 w-5 text-cyan-500" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </span>
-                                    <p class="ml-2">
-                                        Customizing your
-                                        <code class="text-sm font-bold text-gray-900">tailwind.config.js</code> file
-                                    </p>
-                                </li>
-                                <li class="flex items-start">
-                <span class="h-6 flex items-center sm:h-7">
-                  <svg class="flex-shrink-0 h-5 w-5 text-cyan-500" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </span>
-                                    <p class="ml-2">
-                                        Extracting classes with
-                                        <code class="text-sm font-bold text-gray-900">@apply</code>
-                                    </p>
-                                </li>
-                                <li class="flex items-start">
-                <span class="h-6 flex items-center sm:h-7">
-                  <svg class="flex-shrink-0 h-5 w-5 text-cyan-500" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </span>
-                                    <p class="ml-2">Code completion with instant preview</p>
-                                </li>
-                            </ul>
-                            <p>Perfect for learning how the framework works, prototyping a new idea, or creating a demo to share online.</p>
-                        </div>
-                        <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
-                            <p>Want to dig deeper into Tailwind?</p>
-                            <p>
-                                <a href="https://tailwindcss.com/docs" class="text-cyan-600 hover:text-cyan-700"> Read the docs &rarr; </a>
-                            </p>
-                        </div>
-                    </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailus - File uploader</title>
+
+    <link rel="stylesheet" href="../build/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 w-full h-full m-auto">
+        <img id="background" src="../public/images/bg2.webp" class="h-screen w-full object-cover transition duration-300" alt="">
+    </div>
+    <div class="m-auto px-6 sm:px-0 sm:w-8/12 md:w-7/12 lg:w-6/12 xl:w-4/12">
+        <div class="relative group w-full h-64 flex justify-center items-center">
+            <div class="absolute inset-0 w-full h-full rounded-xl bg-white bg-opacity-80 shadow-2xl backdrop-blur-xl group-hover:bg-opacity-70 group-hover:scale-110 transition duration-300"></div>
+            <input accept=".jpg, .jpeg .png, .svg, .webp" class="relative z-10 opacity-0 h-full w-full cursor-pointer" type="file" name="bgfile" id="bgfile">
+            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full m-auo flex items-center justify-center">
+                <div class="space-y-6 text-center">
+                    <img src="../public/images/file.png" class="sm:w-40 w-32 m-auto" alt="illustration">
+                    <p class="text-gray-700 text-lg">Drag and drop a file or <label for="dragOver" title="Upload a file" class="relative z-20 cursor-pointer text-blue-500 hover:text-blue-600 block">Upload a file</label> </p>
                 </div>
             </div>
         </div>
     </div>
-    </body>
+
+    <script src="../build/app.js"></script>
+    <script src="../build/runtime.js"></script>
+</body>
 </html>
